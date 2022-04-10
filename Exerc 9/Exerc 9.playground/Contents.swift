@@ -50,4 +50,3 @@ print("O Henrique tem \(Henrique.idade) anos")
 print("O Clone do Henrique tem \(CloneDoHenrique.idade) anos")
 
 // Como vimos structs passam tipo valor do objeto
-
