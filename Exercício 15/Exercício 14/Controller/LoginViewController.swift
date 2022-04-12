@@ -8,20 +8,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    let WelcomeLabel: UILabel = {
-        let mailLabel = UILabel()
-        mailLabel.text = "Email"
-        return mailLabel
         
-    }()
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(WelcomeLabel)
+
     }
-
-
 }
+
+
+

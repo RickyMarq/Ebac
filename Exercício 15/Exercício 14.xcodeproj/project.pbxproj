@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D445D4D2803618E00F5A676 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D445D4C2803618E00F5A676 /* LoginViewController.swift */; };
+		1D445D4F28038ECC00F5A676 /* Safe Area in Resources */ = {isa = PBXBuildFile; fileRef = 1D445D4E28038ECC00F5A676 /* Safe Area */; };
 		1D8BE7EF28021CF600EAA101 /* API.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D8BE7EE28021CF600EAA101 /* API.json */; };
 		1D8BE7F128021EDC00EAA101 /* NewYorkNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8BE7F028021EDC00EAA101 /* NewYorkNews.swift */; };
 		1D8BE7F428022E5300EAA101 /* NewYorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8BE7F328022E5300EAA101 /* NewYorkTableViewCell.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1D445D4C2803618E00F5A676 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1D445D4E28038ECC00F5A676 /* Safe Area */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Safe Area"; sourceTree = "<group>"; };
 		1D8BE7EE28021CF600EAA101 /* API.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = API.json; sourceTree = "<group>"; };
 		1D8BE7F028021EDC00EAA101 /* NewYorkNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkNews.swift; sourceTree = "<group>"; };
 		1D8BE7F328022E5300EAA101 /* NewYorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				1D445D4A2803612900F5A676 /* View */,
 				1D62F7E32803610100E97143 /* Model */,
 				1DE6AF102800B505009BF0C0 /* Assets.xcassets */,
+				1D445D4E28038ECC00F5A676 /* Safe Area */,
 				1DE6AF152800B505009BF0C0 /* Info.plist */,
 			);
 			path = "Exercício 14";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DE6AF142800B505009BF0C0 /* LaunchScreen.storyboard in Resources */,
+				1D445D4F28038ECC00F5A676 /* Safe Area in Resources */,
 				1D8BE7EF28021CF600EAA101 /* API.json in Resources */,
 				1DE6AF112800B505009BF0C0 /* Assets.xcassets in Resources */,
 				1DE6AF0F2800B503009BF0C0 /* Main.storyboard in Resources */,
