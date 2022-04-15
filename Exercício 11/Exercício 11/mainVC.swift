@@ -22,22 +22,42 @@ class mainVC: UIViewController {
         yay.text = "Yay, você passou dados \n com protocols e delegates"
         yay.numberOfLines = 2
         yay.textAlignment = .center
-        yay.frame = CGRect(x: -10, y: 50, width: 400, height: 200)
         return yay
     }()
     
     let SetDogImage: UIImageView = {
         let dogimage = UIImage(named: "doggo")
         let dog = UIImageView(image: dogimage)
-        dog.frame = CGRect(x: 90, y: 200, width: 200, height: 200)
         return dog
     }()
     
+    func SetupConstraints() {
+       
+        let Constraints = [
+        
+            YayLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            YayLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            YayLabel.widthAnchor.constraint(equalToConstant: 50),
+            YayLabel.heightAnchor.constraint(equalToConstant: 50),
+            
+            
+//            SetDogImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+//            SetDogImage.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+//            SetDogImage.widthAnchor.constraint(equalToConstant: 50),
+//            SetDogImage.heightAnchor.constraint(equalToConstant: 50),
+        
+        ]
+       
+        NSLayoutConstraint.activate(Constraints)
+        
+    }
+        
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemOrange
         view.addSubview(YayLabel)
-        view.addSubview(SetDogImage)
+        SetupConstraints()
 
     }
 }

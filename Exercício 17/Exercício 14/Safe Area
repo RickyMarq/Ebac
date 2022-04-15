@@ -1,0 +1,19 @@
+// 1) - Montar sua tela de Login sem utilizar StackView
+
+Feito no Main.Storyboard
+
+// 2) - Montar sua tela de Login, utilizando StackView
+
+Feito no Main.Storyboard
+
+// 3) Para que serve a Safe Area?
+
+Safe Area é uma funcionalidade que restringe as margens de Views para que conteúdos não "entrem" no recorte do notch, navigationBar e toolbar dos iphones a partir do x.
+
+Assim esses espaços ficam livres impedido que qualquer informação obstrua essas áreas.
+
+- Como respeitar a Safe Area ?
+
+NavigationController e TabBarController ambas respeitam a safe area automaticamente.
+
+
