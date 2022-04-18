@@ -52,8 +52,31 @@ PrintArrays(array: [19])
 
 // 4. Dê um exemplo de uso de Closure com escaping e sem escaping, observando o uso do weak self.
 
+
+print("--- Sem Escaping ---")
+
 // Sem Escaping - Quando passamos uma closure como argumento de uma função, a closure é executada no corpo da função e após isso a closure sai do escopo do projeto e não ocupa mais nenhum lugar na memória.
 
 
+func SemEscaping(sem Noescaping: () -> Void) {
+    Noescaping()
+}
 
-// Com Escaping - Closure que também é passada como argumento de uma função mas é preservada para ser usada novamente, alocando espaço na memória.
+// O Parâmetro "escaping" não possui escaping realmente, portanto só será executada no corpo da função.
+
+print("--- Com Escaping ---")
+
+
+/* Com Escaping - Closure que também é passada como argumento de uma função mas é preservada para ser usada novamente, alocando espaço na memória.
+
+   Ter uma closure com escaping também significa que a mesma pode ser chamada fora do escopo.
+ 
+   Usamos esse tipo de closure quando precisamos que algo dure mais tempo do que apenas uma closure normal, esse tipo de funcionalidade é normalmente usada com Networking dentro de um app.
+ 
+*/
+
+func ComEscaping(com Escaping: @escaping () -> Void) {
+    DispatchQueue.main.async {
+        Escaping()
+    }
+}
