@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        SandBoxFile()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -47,6 +48,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func SandBoxFile() {
+        let fileManager = FileManager.default
+        let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
+        let url = urls.last?.appendingPathComponent("file.txt")
+        
+        do {
+            try "Olá Mundo ᕕ( ᐛ ) ᕗ".write(to: url!, atomically: true, encoding: .utf8)
+        } catch {
+            print("Erro")
+        }
+        
+        do {
+            let content = try String(contentsOf: url!, encoding: String.Encoding.utf8)
+            
+            if content == "Olá Mundo ᕕ( ᐛ ) ᕗ" {
+                print("Escrito com sucesso !")
+                
+            } else {
+                print("Não !")
+            }
+        } catch {
+            print("Ocorreu um erro ao tentar modificar o arquivo")
+        }
+    
+    }
 
 }
 
