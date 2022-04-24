@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    let SetupImagemOndas: UIImageView = {
+    private let SetupImagemOndas: UIImageView = {
         let imagem = UIImage(named: "wave")
         let Ondas = UIImageView(image: imagem)
         Ondas.clipsToBounds = true
@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return Ondas
     }()
     
-    let SetupTextoOlá: UILabel = {
+    private let SetupTextoOlá: UILabel = {
        let BoasVindas = UILabel()
         BoasVindas.text = "Olá"
         BoasVindas.font = UIFont.boldSystemFont(ofSize: 60)
@@ -76,7 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return BoasVindas
     }()
     
-    let SetupTextoLogue: UILabel = {
+    private let SetupTextoLogue: UILabel = {
         let Logue = UILabel()
         Logue.text = "Logue na sua conta"
         Logue.textAlignment = .left
@@ -85,7 +85,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return Logue
     }()
     
-    let SetupEmailField: UITextField = {
+    private let SetupEmailField: UITextField = {
         let Mail = UITextField()
         Mail.placeholder = "Insira seu email..."
         Mail.autocapitalizationType = .none
@@ -96,7 +96,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return Mail
     }()
     
-    let SetupSenhaField: UITextField = {
+    private let SetupSenhaField: UITextField = {
         let Senha = UITextField()
         Senha.placeholder = "Insira seu email..."
         Senha.autocapitalizationType = .none
@@ -107,7 +107,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return Senha
     }()
     
-    let SetupLoginButton: UIButton = {
+    private let SetupLoginButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitle("LOGIN", for: .normal)
         button.layer.cornerRadius = 20
@@ -187,7 +187,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(SetupLabelConta)
         delegate?.notificar(msg: "Cheguei na mainVC")
         setupLayout()
-        // Exercício: Passar valores entre model, view ou ViewController usando delegates e protocols.
     
 
     

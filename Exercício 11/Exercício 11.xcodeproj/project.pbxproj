@@ -58,6 +58,9 @@
 		1D332A0327FC7A5D006B7FF7 /* Exercício 11 */ = {
 			isa = PBXGroup;
 			children = (
+				1D3F20162813696200997988 /* Controller */,
+				1D3F20152813695D00997988 /* View */,
+				1D3F20142813695700997988 /* Model */,
 				1D332A0427FC7A5D006B7FF7 /* AppDelegate.swift */,
 				1D332A0627FC7A5D006B7FF7 /* SceneDelegate.swift */,
 				1D332A1827FE2FE0006B7FF7 /* mainVC.swift */,
@@ -68,6 +71,27 @@
 				1D332A1227FC7A64006B7FF7 /* Info.plist */,
 			);
 			path = "Exercício 11";
+			sourceTree = "<group>";
+		};
+		1D3F20142813695700997988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D3F20152813695D00997988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D3F20162813696200997988 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
