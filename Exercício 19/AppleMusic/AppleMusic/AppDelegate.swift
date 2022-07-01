@@ -1,14 +1,20 @@
-import UIKit
-import Firebase
+//
+//  AppDelegate.swift
+//  AppleMusic
+//
+//  Created by Henrique Marques on 19/06/22.
+//
 
-@main
+import UIKit
+import SnapKit
+
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var backgroundSessionCompletionHandler: (() -> Void)?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
-        // TODO: configure firebase
         return true
     }
 
@@ -26,6 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        backgroundSessionCompletionHandler = completionHandler
+        let configuration = URLSessionConfiguration.background(withIdentifier: identifier)
+        let downloadSession = URLSession(configuration: configuration, delegate: MusicViewController(), delegateQueue: nil)
+        let downloadService = DownloadService()
+        downloadService.downloadsSession = downloadSession
+    }
 
 }
 
